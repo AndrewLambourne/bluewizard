@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<!-- 
+	Name: Andrew Lambourne
+	Date Created: 6/26/2019
+	Last Revision: added 'article' tags 6/26/2019
+-->
+
+	
+<html lang="en">
+	<head>
+		
+		<meta charset="utf-8"> <!-- defines what unicode characters to use -->
+		<meta name="viewport" content="width=device-width, initial-scale=2, shrink-to-fit=no">	
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+		<title>Hogan's Foodery Menu</title>
+		<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!-- this link enables the use of the 'home' icon. -->
+	<style>
+	
+
+	body {
+		max-width: 1000px;
+		margin: 0 auto;
+		background-color: #e8ebfa; <!-- changing the background of the menu itself to be a very light grey. 
+										the specifications for modifying the background of the homepage include
+										directions about not changing behind the header, ect. Since there were no 
+										similar directions for the menu, I simply modified the entire background,
+										rather than just the background for id=menuItem.-->
+	}
+	
+	
+	.jumbotron {
+	background-color: #007bff;
+	}
+	
+	tr td{
+		padding: 0 !important;
+		margin: 0 !important; 	<!-- this is necessary to get the menu to look right;
+								a table in bootstrap has pre-formated lines and spaces and this removes them. -->
+	}
+	
+	#menu {
+		display: block;
+		width: 800px;
+		margin:auto;
+	}
+	
+	.jumbotron {
+	background-color: #007bff;
+	font-family: monoton;
+	color: white; 
+	text-align: right;
+	font-style: italic;
+	}
+	
+	h1 {
+	font-family: monoton;
+	text-align: left;
+	}	
+	
+	h3, h2 {
+		font-family: monoton; 
+	}
+	
+	nav {
+		background-color: #e8ebfa;
+		border: 10px;
+		padding: 25px;
+		margin: 5x;
+		font-size: 1.4em;
+		color: #e8ebfa;
+		text-align: left;
+		display: block;
+		border: solid 0px;
+		border-color: #e8ebfa;	
+	}
+	
+	#borderControl {
+	background-color: black;
+	outline-width: 1px;
+	background: 0px;
+	width: 850px;
+	}
+	
+	#menuItems {
+		text-align: center;
+		background-color: #e8ebfa;
+		position:relative; 
+		TOP:5px; LEFT: 50px;
+		width=120px;
+		height=350px;
+	}
+
+	.foodTitles {
+	font-size: 1.2em; <!-- Menu names are larger than the item descriptions-->
+	}
+	
+	.shade { 
+		background-color:#d92626; color:white; 		
+	} 
+	
+	#beverageTitle {
+			font-weight: bold;
+			position: relative;
+			text-align: center;
+	}
+	
+	#beverageTable {
+		text-align: center;
+		position: relative; 
+		LEFT: 205px;
+		margin: 30px;
+		background-color: #e8ebfa;
+		border: 0px solid;
+		width: 50%;	
+	}
+
+		.carouselFont {
+		font-family: monoton;
+	text-color: white;
+	}
+	
+	.badge-pill {
+		background-color: #d92626;
+	}
+
+	</style>
+	
+	</head>
+		
+	<div class="container-fluid">
+	
+
+	<body>
+
+	
+	<div class="jumbotron"> 
+	<h1>Hogan's &nbsp &nbsp Foodery
+	<h1>&nbsp
+	<h3 class="text-right">HOGAN'S IS NOW COAST-TO-COAST! &nbsp</h3>
+	<h3 class="text-right">NEW LOCATION: COLMA,CALIFORNIA! &nbsp</h3>
+	
+	</div>
+		<main>	
+	<div id="newInfo" class="carousel slide" data-ride="carousel">
+
+ 
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a class="carouselFont" alt="We're opening a new location!">We are opening a new location!</a>
+    </div>
+    <div class="carousel-item">
+      <a class="carouselFont" alt="We're rolling out our seasonal menu, with special options for this season.">We're rolling out our seasonal menu, with special options for this season.</a>
+    </div>
+    <div class="carousel-item">
+      <a class="carouselFont" alt="The Drink of the Month is SG Special Brew.">The Drink of the Month is SG Special Brew.</a>
+    </div>
+  </div>
+
+<hr class="blueMatch">
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+<div class="row">
+		<div class="col-lg-5 col-md">
+		
+			<nav>
+                <a class="btn-lg fas fa-home badge-pill" href="homepageFinal.html">Home</a>
+				<a> &nbsp </a>
+                <a class="btn-lg badge-pill" href="menu.html">Menu</a>
+				<a> &nbsp </a>
+                <a class="btn-lg badge-pill" href="contactus.html">Contact Us</a>
+			</nav>
+			</div>
+	</div>
+
+<hr class="blueMatch">
+
+
+
+</div>
+<br>
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-4 col-sm-6 col-xs-12 text-center">
+<h5>Burger and Fries</h5>
+An American Classic!<br>Your choice- with or without cheese<br>Pickle, onion, tomato, and lettuce<br>Served with our famous thick cut<br>french fries<br>$7.9
+        </div>
+		
+<div class="col-md-4 col-sm-6 col-xs-12 text-center">
+<h5>Hot Dog and Chips</h5>
+A Summer Classic!<br>Your choice- white or wheat bun<br>Relish, mustard, and ketchup<br>Served with our house-made chips<br>$7.95
+        </div>
+		
+<div class="col-md-4 col-sm-6 col-xs-12 text-center">
+<h5>Italian Sausage and Peppers</h5>
+An All-Time Favorite!<br>Your choice - mild or spicy Cole Slaw<br>Served with garlic mashers<br>$10.95 
+        </div> 
+		
+	</div>	
+	<div class="row">&nbsp
+	</div>
+		<div class="row">
+		
+<div class="col-md-4 col-sm-6 col-xs-12 text-center">
+<h5>Tenderloin Sandwich and Chips</h5>
+Really Hits the Spot!<br>Plain or Sesame Seed Bun<br>Pickle, onion, tomato, and lettuce<br>Served with our house-made chips<br>$8.95
+           
+        </div>
+<div class="col-md-4 col-sm-6 col-xs-12 text-center">
+<h5>House Salad</h5>
+On the Lighter Side<br>Your choice- with or without cheese<br>Iceberg lettuce, tomatoes, peppers<br>Thousand Island or Ranch<br>Dressing Served with a dinner roll<br>$6.95
+
+
+        </div>
+		
+<div class="col-md-4 col-sm-6 col-xs-12 text-center">
+<h5>Brisket Sandwich and Fries</h5>
+A Taste of Texas!<br>Smoked Brisket on thick-cut<br>Texas Toast<br>Cole Slaw<br>Served with our famous thick-cut <br>french fries<br>$7.95
+        </div>
+
+        </div>
+    </div>
+		<div class="row">
+	 <div class="col-md-4 col-sm-2 col-xs-1">
+	</div>
+	
+	 <div class="col-md-4 col-sm-4 col-xs-10 text-center">
+			<h2>Beverages</h2>
+		
+			
+			<div class="shade">Root Beer $3.00
+			</div>
+			<div class="text-center">Bottled Water $1.25
+			</div>
+			<div class="shade">Lemonade $1.00	
+			</div>
+			<div class="text-center">Iced Tea $1.25
+			</div>
+	
+		</div>
+		<div class="row">
+	 <div class="col-md-4 col-sm-2 col-xs-1">
+	</div>
+	</div>
+</div>	
+		
+</table>
+	
+	<hr>
+	
+	</main>
+		<div>
+       <script src="js/jquery-3.3.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+       <script src="js/bootstrap.min.js"></script>
+       </div>
+	
+</div>
+	<footer>
+	<blockquote><p>105 Locust Ave, Centralia, Pennsylvania, 17927</p></blockquote>
+		<blockquote><p>570-737-2919</p></blockquote>
+	</footer>
+</body>
+</html>

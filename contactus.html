@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<!-- 
+	Name: Andrew Lambourne
+	Date Created: 6/26/2019
+	Most Recent Revision: adjusteded some styles 7/7/19	
+-->	
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"> <!-- defines what unicode characters to use -->
+		<meta name="viewport" content="width=device-width, initial-scale=2, shrink-to-fit=no">	
+		
+	
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+		<title>Hogan's Foodery Contact Us</title>
+		<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet"> 
+		<!-- hosted font courtesy of our beneficient overlords at Google.^ -->
+	
+		<script type="text/javascript" src="ConVal.js">
+		</script>  <!-- script for the validation submission and pop-up -->
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!-- this link enables the use of the 'home' icon. -->
+	
+	
+
+	<style>
+	
+	body {
+		max-width: 1000px;
+		margin: 0 auto;
+		background-color: white;
+		color: black;
+	}	
+	
+		.jumbotron {
+	background-color: #007bff;
+	font-family: monoton;
+	color: white; 
+	text-align: right;
+	font-style: italic;
+	}
+	
+	h1 {
+	font-family: monoton;
+	text-align: left;
+	}	
+	
+	.boldAndBrash {
+		font-weight: bold; <!-- I have included Name, Email, and/or Phone as the required fields -->
+	}
+	
+	
+	hover {
+		font-weight:bold;
+
+	}	
+	
+	.right-content {
+		float:left;
+	}
+	
+	.clear-float {
+		clear:both;
+	}
+
+	#beenToRest {
+		text-align: center;
+	}
+	
+	#beenToRest2 {
+		text-align: right;
+	}
+	
+	#rowX {
+		border: 2px;
+	}
+
+	.carouselFont {
+		font-family: monoton;
+	text-color: white;
+	}
+	
+	.badge-pill {
+		background-color: #d92626;
+	}
+	
+	</style> <!--there are no in-line styles in this page, as per the instructions. -->
+	</head>
+	
+	<div class="container-fluid">
+	
+
+	<body>
+	<noscript><h3>Oh no! Your browser does not support JavaScript!</h3></noscript>
+	
+	<div class="jumbotron"> 
+	<h1>Hogan's &nbsp &nbsp Foodery
+	<h1>&nbsp
+	<h3 class="text-right">HOGAN'S IS NOW COAST-TO-COAST! &nbsp</h3>
+	<h3 class="text-right">NEW LOCATION: COLMA,CALIFORNIA! &nbsp</h3>
+	
+	</div>
+		
+		<main>	
+	<div id="newInfo" class="carousel slide" data-ride="carousel">
+
+  <ul class="carousel-indicators">
+    <li data-target="#news" data-slide-to="0" class="active"></li>
+    <li data-target="#news" data-slide-to="1"></li>
+    <li data-target="#news" data-slide-to="2"></li>
+  </ul>
+
+ 
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a class="carouselFont" alt="We're opening a new location!">We are opening a new location!</a>
+    </div>
+    <div class="carousel-item">
+      <a class="carouselFont" alt="We're rolling out our seasonal menu, with special options for this season.">We're rolling out our seasonal menu, with special options for this season.</a>
+    </div>
+    <div class="carousel-item">
+      <a class="carouselFont" alt="The Drink of the Month is SG Special Brew.">The Drink of the Month is SG Special Brew.</a>
+    </div>
+  </div>
+
+
+</div>
+
+
+<hr class="blueMatch">
+	  <div class="row">
+		<div class="col-lg-5 col-md">
+		
+			<nav>
+                <a class="btn-lg fas fa-home badge-pill" href="homepageFinal.html">Home</a>
+				<a> &nbsp </a>
+                <a class="btn-lg badge-pill" href="menu.html">Menu</a>
+				<a> &nbsp </a>
+                <a class="btn-lg badge-pill" href="contactus.html">Contact Us</a>
+			</nav>
+			</div>
+	</div>
+
+<hr class="blueMatch">
+<form name="valid" onsubmit="return validateItems();">
+ <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right boldAndBrash">Name:</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+		 
+		 <div class="form-group">
+                        <input type="text" id="name" class="form-control">
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center"></div>
+		</div>
+		</div>
+		
+<div class="row">
+			 <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right boldAndBrash">Email:</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+		 <div class="form-group">
+                        <input type="text" id="email" class="form-control">
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center"></div>
+		</div>
+		</div>
+		
+<div class="row" id="rowX">	
+ <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right boldAndBrash">Phone:</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+		 <div class="form-group">
+                        <input type="text" id="phone" class="form-control">
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center"></div>
+		
+		</div>	
+</div>
+	<div class="row">
+	<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right">Reason for Inquiry:</div>
+	<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+	<div id="reasonInq" class="dropdown">
+  <button class="btn dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+    Catering
+  </button>
+  <div class="dropdown-menu" = "dropdownMenuButton">
+    <a class="dropdown-item">Private Party</a>
+    <a class="dropdown-item">Feedback</a>
+    <a class="dropdown-item">Other</a>
+	<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center"></div>
+  </div>
+</div>
+	</div>
+	</div>
+
+<div class="row">&nbsp</div>	
+
+<div class="row">	
+ <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right">Additional Information:</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+		 <div class="form-group">
+                        <textarea class="form-control" id="textArea" rows="3" id="comment"></textarea>
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center"></div>
+		</div>
+		
+</div>
+
+<div class="row">	
+ <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right">Have you been to the restaurant?</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+			<div class="form-group">
+                     
+					 <label class="radio-inline" id="beenToRest"><input type="radio" name="optradio" checked>No</label>
+						
+					<label >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+
+					<label class="radio-inline" id="beenToRest2"><input type="radio" name="optradio">Yes</label>
+							
+					</div>				
+					</div>
+				</div>
+			<div class="col-lg-5 text-left"></div>
+		
+
+<div class="row">	
+ <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right">Best day to contact you:</div>
+		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-left">
+          <div class="form-check form-check-inline">
+
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1">
+				<label class="form-check-label">M</label>
+				</div>
+
+				<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="2">
+				<label class="form-check-label">T</label>
+				</div>
+
+				<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="3">
+				<label class="form-check-label">W</label>
+				</div>    
+
+				<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="2">
+				<label class="form-check-label">Th</label>
+				</div>
+
+				<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="3">
+				<label class="form-check-label">F</label>
+				</div>
+
+
+
+	</div>
+		</div>
+			 <div class="row">
+			<div class="col-lg-4 text-right"></div>
+			<div class="col-lg-4 text-center">
+			 <div class="form-group">
+							 <button type="submit" name="submit" id="submit" value="Submit" class="btn-lg">Send Request</button> 
+			</div>
+			<div class="col-lg-4 text-center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	
+	      
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+       <script src="js/bootstrap.js"></script>
+	 
+		
+		
+			
+			<footer>
+			
+			
+				 <script src="js/jquery-3.3.1.min.js"></script>
+			<blockquote>105 Locust Ave, Centralia, Pennsylvania, 17927</blockquote>
+				<blockquote>570-737-2919</blockquote>
+			</footer>
+		</main>
+		</body>
+</html>
